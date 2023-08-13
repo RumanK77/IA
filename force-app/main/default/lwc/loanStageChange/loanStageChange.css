@@ -1,0 +1,21 @@
+.container {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.slds-var-m-around_medium {
+    margin: 16px;
+}
+
+lightning-combobox, lightning-button {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 16px;
+}

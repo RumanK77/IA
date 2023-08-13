@@ -1,0 +1,31 @@
+.container {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.file-upload-container {
+    margin-left: 4%;
+    margin: 0px auto;
+    width: 300px;
+}
+
+.error-message {
+    font-size: 14px;
+    color: red;
+    margin-top: 8px;
+}
+
+.upload-button {
+    margin-top: 16px;
+}
+
+.datatable-container {
+    width: auto;
+}

@@ -1,0 +1,27 @@
+<template>
+    <div class="container">
+        <lightning-card title="External API Callout">
+            <div class="card-content slds-var-p-around_medium">
+                <lightning-button label="Fetch Employee" class="slds-var-m-bottom_medium" onclick={handleClick} variant="brand"></lightning-button>
+                <template if:true={error}>
+                    <p class="slds-text-color_error">{error}</p>
+                </template>
+                <template if:true={employeeData}>
+                    <ul class="slds-list_dotted">
+                        <template for:each={employeesData} for:item="employee">
+                            <li key={employee.id} class="slds-var-m-top_medium employee-item">
+                                <p><strong>Name:</strong> {employee.employee_name}</p>
+                                <p><strong>Salary:</strong> {employee.employee_salary}</p>
+                                <p><strong>Age:</strong> {employee.employee_age}</p>
+                                <p><strong>Profile Image:</strong></p>
+                                <div class="slds-var-m-top_x-small">
+                                    <img src={employee.profile_image} alt={employee.employee_name} class="slds-var-p-around_x-small profile-image" />
+                                </div>
+                            </li>
+                        </template>
+                    </ul>
+                </template>
+            </div>
+        </lightning-card>
+    </div>
+</template>

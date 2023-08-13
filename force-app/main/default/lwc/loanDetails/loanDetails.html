@@ -1,0 +1,72 @@
+<template>
+    <div class="slds-var-p-around_medium">
+        <div class="slds-text-heading_large slds-text-align_center slds-var-m-bottom_medium">
+            <u><strong>Loan Details</strong></u>
+        </div>
+        <div class="slds-text-align_center">
+            <lightning-button label="Get Records" onclick={handleSearch} variant="brand"></lightning-button>
+        </div>
+        <div class="slds-var-m-top_small">
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                <thead>
+                    <tr class="slds-line-height_reset">
+                        <th class="slds-text-title_caps" scope="col">
+                            Loan Name
+                        </th>
+                        <th class="slds-text-title_caps" scope="col">
+                            Loan Stage
+                        </th>
+                        <th class="slds-text-title_caps" scope="col">
+                            Loan Amount
+                        </th>
+                        <!--<th class="slds-text-title_caps" scope="col">
+                            Loan Id
+                        </th> -->
+                        <th class="slds-text-title_caps" scope="col">
+                            ROI (P.A.)
+                        </th>
+                        <th class="slds-text-title_caps" scope="col">
+                            EMI
+                        </th>
+                        <th class="slds-text-title_caps" scope="col">
+                            Tenure
+                        </th>
+                        <th class="slds-text-title_caps" scope="col">
+                            Total Amount
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={searchResult} for:item="Ln">
+                        <tr class="slds-hint-parent" key={Ln.Name}>
+                            <td>
+                                {Ln.Name}
+                            </td>
+                            <td>
+                                {Ln.Loan_Stage__c}
+                            </td>
+                            <td>
+                                {Ln.Loan_Amount__c}
+                            </td>
+                            <!--<td>
+                                {Ln.Loan_Id}
+                            </td>-->
+                            <td>
+                                {Ln.ROI_P_A__c}
+                            </td>
+                            <td>
+                                {Ln.EMI__c}
+                            </td>
+                            <td>
+                                {Ln.Tenure__c}
+                            </td>
+                            <td>
+                                {Ln.Total_Amount__c}
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</template>

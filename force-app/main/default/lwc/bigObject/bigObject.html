@@ -1,0 +1,38 @@
+<template>
+    
+    <lightning-card title="Import Employee Data">
+        <div class="slds-p-around_medium">
+            <lightning-button label="Fetch Employee" variant="brand" onclick={handleFetchEmployee}></lightning-button>
+        </div>
+    </lightning-card>
+    </template>
+    
+    <!--<lightning-card if:true={importedEmployees.length} title="Imported Employee Data">
+        <div class="slds-p-around_medium">
+            <table class="slds-table slds-table_bordered slds-table_striped slds-table_cell-buffer">
+                <thead>
+                    <tr>
+                        <th scope="col">Employee Name</th>
+                        <th scope="col">Employee Age</th>
+                        <th scope="col">Employee Salary</th>
+                        <th scope="col">Profile Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={importedEmployees} for:item="employee">
+                        <tr key={employee.Id}>
+                            <td>{employee.employee_name__c}</td>
+                            <td>{employee.employee_age__c}</td>
+                            <td>{employee.employee_salary__c}</td>
+                            <td>
+                                <template if:true={employee.profile_image__c}>
+                                    <img src={employee.profile_image__c} alt={employee.employee_name__c} width="50" />
+                                </template>
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+    </lightning-card>
+</template> -->
