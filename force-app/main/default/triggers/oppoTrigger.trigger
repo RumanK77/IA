@@ -14,4 +14,6 @@ trigger oppoTrigger on Opportunity (after update) {
 //DeleteHistoricalLoanRecordsBatch
 //BatchTimer
 //CreateRepaymentActualRecord
+//RepaymentActualTrigger
 //RepaymentActualTriggerHandler
+//TestRepaymentActualTriggerHandler
