@@ -6,7 +6,7 @@
             </div>
         </template>
 
-        <lightning-card title="Process CSV File">
+        <lightning-card title="Import Repayment Actual Records Using CSV">
             <div class="file-upload-container">
                 <lightning-input label="Upload CSV File" name="fileUploader" onchange={handleFilesChange} type="file" multiple></lightning-input>
                 <div class="error-message slds-text-color_error">{fileName}</div>
@@ -17,6 +17,7 @@
         <lightning-card title="Repayment Actual Records" icon-name="standard:account">
             <div class="datatable-container">
                 <template if:true={data}>
+                    
                     <lightning-datatable data={data} columns={columns} key-field="id"></lightning-datatable>
                 </template>
             </div>

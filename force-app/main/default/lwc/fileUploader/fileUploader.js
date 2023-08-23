@@ -61,31 +61,11 @@ export default class fileUploader extends LightningElement {
         this.fileReader.readAsText(this.file);
     }
 
-    /*validateAndSaveToFile() {
-        const lines = this.fileContents.split('\n');
-        for (let i = 1; i < lines.length; i++) {
-            const csvRowData = lines[i].split(',');
-            const repaymentSchedule = csvRowData[2];
-            if (!repaymentSchedule) {
-                this.showError = true;
-                this.showLoadingSpinner = false;
-                this.dispatchEvent(
-                    new ShowToastEvent({
-                        title: 'Error',
-                        message: 'Repayment Schedule is missing for some rows in the CSV file',
-                        variant: 'error',
-                    })
-                );
-                return;
-            }
-        }
-        this.showError = false;
-        this.saveToFile();
-    }*/
+    
 
     saveToFile() {
         console.log('saveToFile')
-        importCSVFile({ base64Data: JSON.stringify(this.fileContents), cdbId: this.recordid })
+        importCSVFile({ base64Data: JSON.stringify(this.fileContents)})//, cdbId: this.recordid })
             .then(result => {
                 window.console.log('result ====> ');
                 window.console.log(result);
