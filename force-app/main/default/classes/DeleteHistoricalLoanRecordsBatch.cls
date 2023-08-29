@@ -1,5 +1,5 @@
-global class DeleteHistoricalLoanRecordsBatch implements Database.Batchable<SObject>, Database.Stateful{
-    String strObjectName;
+global class DeleteHistoricalLoanRecordsBatch {//implements Database.Batchable<SObject>, Database.Stateful{
+    /*String strObjectName;
     Date fourDaysAgo = Date.today().addDays(-4);
     list<Id> undeletedRecordIds = new list<Id>();
     
@@ -31,5 +31,5 @@ global class DeleteHistoricalLoanRecordsBatch implements Database.Batchable<SObj
             mail.setPlainTextBody(emailBody);
             Messaging.sendEmail(new Messaging.SingleEmailMessage[] {mail});
         }
-    }
+    }*/
 }

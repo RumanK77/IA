@@ -5,15 +5,3 @@ trigger oppoTrigger on Opportunity (after update) {
         }
     }
 }
-
-
-
-//oppoTrigger
-//OppoTriggerHandler
-//OppoTriggerHandlerTest
-//DeleteHistoricalLoanRecordsBatch
-//BatchTimer
-//CreateRepaymentActualRecord
-//RepaymentActualTrigger
-//RepaymentActualTriggerHandler
-//TestRepaymentActualTriggerHandler

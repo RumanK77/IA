@@ -37,12 +37,13 @@ public with sharing class CreateRepaymentActualRecord {
                 column = column.replaceAll(':quotes:', '').replaceAll(':comma:', ',').trim();
                 csvRowData.add(column);
             }
-            RA.Actual_Repayment_Date__c = Date.parse(csvRowData[0]);//Date.valueOf(csvRowData[0]);
+            RA.Actual_Repayment_Date__c = Date.valueOf(csvRowData[0]);
             RA.Amount_Deposited__c = Decimal.valueOf(csvRowData[1]);//csvRowData[1] != '':Decimal.valueOf(csvRowData[1]) ?;
             RA.Repayment_Schedule__c = csvRowData[2];
+            RA.Loan__c = csvRowData[3];
             ListRA.add(RA);
         }
         insert ListRA;
-        return [Select Id, Actual_Repayment_Date__c, Amount_Deposited__c, Repayment_Schedule__c From Repayment_Actual__c];
+        return [Select Id,Loan__C, Actual_Repayment_Date__c, Amount_Deposited__c, Repayment_Schedule__c From Repayment_Actual__c];
     }  
 }
